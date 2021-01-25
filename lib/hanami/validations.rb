@@ -264,7 +264,7 @@ module Hanami
       # @api private
       def _build(options = {}, &blk)
         options = {build: false}.merge(options)
-        Dry::Validation.__send__(_schema_type, options, &blk)
+        Dry::Validation.__send__(_schema_type, **options, &blk)
       end
 
       # @since 0.6.0
